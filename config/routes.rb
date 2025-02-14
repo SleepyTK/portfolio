@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root "pages#home"
+  scope "(:locale)", locale: /en|ja/ do
+    root 'pages#home'
+    get 'about', to: 'pages#about'
+    get 'projects', to: 'pages#projects'
+    get 'contact', to: 'pages#contact'
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

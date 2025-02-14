@@ -1,7 +1,9 @@
 :root {
-    --color-background-main:#111111;
-    --color-primary:#111111;
-    --color-text:#FFFFFF;
+    --color-background-main: #111111;
+    --color-primary: #111111;
+    --color-secondary: #0A0A0A;
+    --color-text: #999999;
+    --color-text-accent: #dfdfdf;
 }
 
 * {
@@ -17,7 +19,10 @@ body {
     background: var(--color-background-main);
     color: var(--color-text);
 
-    font-family: 'Noto Serif JP', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
 }

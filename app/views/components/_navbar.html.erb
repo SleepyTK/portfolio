@@ -1,0 +1,57 @@
+<nav class="navigation-menu">
+  <ul>
+    <section class="navigation-menu__top">
+        <li>
+        <%= link_to root_path(locale: I18n.locale), class: "navigation-menu__link #{'active' if current_page?(root_path)}" do %>
+            <i class="fa-solid fa-house"></i>
+            <%= t('navbar.home') %>
+        <% end %>
+        </li>
+
+        <li>
+        <%= link_to about_path(locale: I18n.locale), class: "navigation-menu__link #{'active' if current_page?(about_path)}" do %>
+            <i class="fa-solid fa-user"></i>
+            <%= t('navbar.about') %>
+        <% end %>
+        </li>
+
+        <li>
+        <%= link_to projects_path(locale: I18n.locale), class: "navigation-menu__link #{'active' if current_page?(projects_path)}" do %>
+            <i class="fa-solid fa-briefcase"></i>
+            <%= t('navbar.projects') %>
+        <% end %>
+        </li>
+
+        <li>
+        <%= link_to contact_path(locale: I18n.locale), class: "navigation-menu__link #{'active' if current_page?(contact_path)}" do %>
+            <i class="fa-solid fa-envelope"></i>
+            <%= t('navbar.contact') %>
+        <% end %>
+        </li>
+
+        <li>
+        <%= link_to "https://github.com/SleepyTK", class: "navigation-menu__link", target: "_blank" do %>
+            <i class="fa-brands fa-github"></i>
+            <span>Github</span>
+            <i class="fa-solid fa-up-right-from-square link-icon"></i>
+        <% end %>
+        </li>
+    </section>
+    <!-- Language Switcher with icons -->
+    <section class="navigation-menu__bottom">
+        <li class="language-switcher">
+        <%= link_to url_for(locale: :en), class: " #{'active' if I18n.locale == :en}" do %>
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>ENG</span>
+        <% end %>
+        
+        <span class="separator">|</span>
+        
+        <%= link_to url_for(locale: :ja), class: " #{'active' if I18n.locale == :ja}" do %>
+            <i class="fa-solid fa-earth-asia"></i>
+            <span>日本語</span>
+        <% end %>
+        </li>
+    </section>
+  </ul>
+</nav>
