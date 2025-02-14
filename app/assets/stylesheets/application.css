@@ -1,0 +1,23 @@
+:root {
+    --color-background-main:#111111;
+    --color-primary:#111111;
+    --color-text:#FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+
+    background: var(--color-background-main);
+    color: var(--color-text);
+
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-style: normal;
+}
