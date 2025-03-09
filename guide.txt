@@ -1,0 +1,50 @@
+Portfolio Website Tech Stack:
+Frontend: React, Next.js
+Backend: Flask
+Data: SQLite
+Deployment: Render?
+Image Storage: Cloudinary
+Version Control: Github
+
+SETUP:
+1. Project Structure
+- make a folder for your project "my portfolio" e.g.
+- add a frontend and backend folder in your portfolio directory
+
+2. React + Next.js setup
+- install node.js and npm
+- Create Next.js project by running `npx create-next-app@latest frontend`
+√ Would you like to use TypeScript? Yes
+√ Would you like to use ESLint? Yes
+√ Would you like to use Tailwind CSS? No
+√ Would you like your code inside a `src/` directory? Yes
+√ Would you like to use App Router? (recommended) Yes
+√ Would you like to use Turbopack for `next dev`? Yes
+√ Would you like to customize the import alias (`@/*` by default)? No
+- install any additional dependencies inside the frontend folder by running this:
+`cd frontend
+npm install react react-dom next`
+- next run this command for multilingual support for your website if you want it `npm install next-i18next`
+
+3. Flask setup
+- setup a virtual environment in your backend directory using these commands:
+`cd backend
+python -m venv venv
+venv\Scripts\Activate # to activate the virtual environment
+`
+- install flask and other dependencies using these commands while inside the virtual environment: `pip install Flask Flask-SQLAlchemy`
+- create a basic app.py file for your flask application in the backend directory
+- run these commands to create the SQLite database and tables: 
+`
+from app import db
+db.create_all()
+`
+
+4. Image Storage Cloudinary
+- make an account on Cloudinary
+- get your API key and API secret
+- Install the cloudinary python library into your venv
+- setup cloudinary in your code now or later.
+
+5. Github
+- Initialize git by going into your projects root directory "my portfolio" and running: `git init`
